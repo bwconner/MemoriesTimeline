@@ -10,9 +10,9 @@ class VideoList extends Component {
 			if (video.year.includes(this.props.year)){
 				return (
 					<div 
-						key={video.caption} 
+						//key={video.filepath} 
 						onClick={() => this.props.selectVideo(video)}
-						className="media-left">
+						className="search-result-item">
 						<img src={video.filepath} />
 						<p>{video.caption} - {video.year}</p>
 					</div>
@@ -25,7 +25,7 @@ class VideoList extends Component {
 
 	render() {
 		return(
-			<div className="media">
+			<div className="seatch-results">
 				{this.renderVideoList()}
 			</div>
 		);

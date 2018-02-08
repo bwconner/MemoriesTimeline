@@ -10,9 +10,9 @@ class PictureList extends Component {
 			if (picture.year.includes(this.props.year)){
 				return (
 					<div 
-						key={picture.caption} 
+						//key={picture.filepath} 
 						onClick={() => this.props.selectImage(picture)}
-						className="media-left">
+						className="search-result-item">
 						<img src={picture.filepath} />
 						<p>{picture.caption} - {picture.year}</p>
 					</div>
@@ -25,7 +25,7 @@ class PictureList extends Component {
 
 	render() {
 		return(
-			<div className="media">
+			<div className="search-results">
 				{this.renderPictureList()}
 			</div>
 		);
