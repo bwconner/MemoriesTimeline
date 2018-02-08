@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import {selectVideo} from "../actions/index";
+import {Link} from "react-router-dom";
 
 class VideoList extends Component {
 
@@ -10,11 +11,13 @@ class VideoList extends Component {
 			if (video.year.includes(this.props.year)){
 				return (
 					<div 
-						//key={video.filepath} 
+						key={video.id} 
 						onClick={() => this.props.selectVideo(video)}
 						className="search-result-item">
-						<img src={video.filepath} />
-						<p>{video.caption} - {video.year}</p>
+						<Link to={`/video/${video.id}`} >
+							<img src={video.filepath} />
+							<p>{video.caption} - {video.year}</p>
+						</Link>
 					</div>
 				);
 			} else {

@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import {selectImage} from "../actions/index";
+import {Link} from "react-router-dom";
 
 class PictureList extends Component {
 
@@ -10,11 +11,13 @@ class PictureList extends Component {
 			if (picture.year.includes(this.props.year)){
 				return (
 					<div 
-						//key={picture.filepath} 
+						key={picture.id} 
 						onClick={() => this.props.selectImage(picture)}
 						className="search-result-item">
-						<img src={picture.filepath} />
-						<p>{picture.caption} - {picture.year}</p>
+						<Link to={`/picture/${picture.id}`} >
+							<img src={picture.filepath} />
+							<p>{picture.caption} - {picture.year}</p>
+						</Link>
 					</div>
 				);
 			} else {
