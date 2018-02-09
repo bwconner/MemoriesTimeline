@@ -25,3 +25,12 @@
 .section-divider {
 	border-bottom: 1px solid black;
 }
+
+
+.related-list {
+	width: 100%;
+}
+.related-videos, 
+.related-pictures {
+	display: inline-block;
+}
