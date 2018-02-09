@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
+import MediaPage from "../components/media-page";
+import RelatedList from "../components/related-list";
 
 class ViewPicture extends Component {
 
@@ -14,14 +16,8 @@ class ViewPicture extends Component {
 				<Link to="/" className="pull-left">
 					Return to Search
 				</Link>
-				<div>
-					<img src={image[0].filepath}/>
-				</div>
-				<div>
-					<h3>{image[0].title}</h3>
-					<h4 className="section-divider">{image[0].year}</h4>
-					<p>{image[0].caption}</p>
-				</div>
+				<MediaPage media={image} />
+				<RelatedList />
 			</div>
 		);
 	}

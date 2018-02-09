@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
+import MediaPage from "../components/media-page";
+import RelatedList from "../components/related-list";
 
 class ViewVideo extends Component {
 
@@ -14,14 +16,8 @@ class ViewVideo extends Component {
 				<Link to="/" className="pull-left">
 					Return to Search
 				</Link>
-				<div>
-					<img src={video[0].filepath}/>
-				</div>
-				<div>
-					<h3>{video[0].title}</h3>
-					<h4 className="section-divider">{video[0].year}</h4>
-					<p>{video[0].caption}</p>
-				</div>
+				<MediaPage media={video} />
+				<RelatedList />
 			</div>
 		);
 	}
