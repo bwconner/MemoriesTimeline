@@ -16,7 +16,7 @@ class VideoList extends Component {
 						className="search-result-item">
 						<Link to={`/video/${video.id}`} >
 							<img src={video.filepath} />
-							<p>{video.caption} - {video.year}</p>
+							<p>{video.title} - {video.year}</p>
 						</Link>
 					</div>
 				);

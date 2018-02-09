@@ -16,7 +16,7 @@ class PictureList extends Component {
 						className="search-result-item">
 						<Link to={`/picture/${picture.id}`} >
 							<img src={picture.filepath} />
-							<p>{picture.caption} - {picture.year}</p>
+							<p>{picture.title} - {picture.year}</p>
 						</Link>
 					</div>
 				);
