@@ -2,6 +2,10 @@
 	margin-top: 15px;
 }
 
+.search-bar {
+	margin: 25px auto 0px;
+	width: 75% !important;
+}
 
 .search-result-item {
 	display: inline-block;
@@ -16,4 +20,8 @@
 
 .form-control {
 	padding-bottom: 20px;
+}
+
+.section-divider {
+	border-bottom: 1px solid black;
 }
