@@ -5,8 +5,8 @@ import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import SearchPage from './components/search-page';
-import ViewPicture from './components/view-picture';
-import ViewVideo from './components/view-video';
+import ViewPicture from './containers/view-picture';
+import ViewVideo from './containers/view-video';
 import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
