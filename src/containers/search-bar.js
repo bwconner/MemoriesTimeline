@@ -23,7 +23,7 @@ class SearchBar extends Component {
 				placeholder="Enter a Year"
 				value={this.state.term}
 				onChange={this.onInputChange}
-				className="form-control"
+				className="form-control search-bar"
 			/>
 		)
 	}
