@@ -13,7 +13,7 @@ class ViewVideo extends Component {
 
 		return (
 			<div>
-				<Link to="/" className="pull-left">
+				<Link to="/" className="pull-left btn btn-info">
 					Return to Search
 				</Link>
 				<MediaPage media={video} />

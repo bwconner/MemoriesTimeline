@@ -1,3 +1,7 @@
+body {
+	margin-top: 20px;
+}
+
 .results-header {
 	margin-top: 15px;
 }
@@ -19,7 +23,7 @@
 }
 
 .form-control {
-	padding-bottom: 20px;
+	margin-bottom: 0px;
 }
 
 .section-divider {
@@ -33,4 +37,18 @@
 .related-videos, 
 .related-pictures {
 	display: inline-block;
+}
+
+.media-page-image {
+	width: 100%;
+	margin: 20px auto;
+	max-width: 600px;
+
+	img {
+		width: 100%;
+	}
+}
+
+.related-list {
+	margin-top: 50px;
 }
