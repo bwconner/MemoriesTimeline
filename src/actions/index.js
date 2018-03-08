@@ -3,11 +3,11 @@ export const IMAGE_SELECTED = "IMAGE_SELECTED";
 export const VIDEO_SELECTED = "VIDEO_SELECTED";
 
 
-export function updateYear(year) {	
+export function updateYear(term) {	
 	//A search has been completed, need to return list of pictures and videos
 	return {
 		type: UPDATE_SEARCH, //describes purpose of the action
-		payload: year //clarifies conditons of action being triggered
+		payload: term //clarifies conditons of action being triggered
 	};
 }
 

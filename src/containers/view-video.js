@@ -17,7 +17,7 @@ class ViewVideo extends Component {
 					Return to Search
 				</Link>
 				<MediaPage media={video} />
-				<RelatedList />
+				<RelatedList mediaYear={video[0].year} mediaTitle={video[0].title} />
 			</div>
 		);
 	}

@@ -5,22 +5,25 @@ import {Link} from "react-router-dom";
 class RelatedVideos extends Component {
 
 	renderRelatedVideoList() {
-		return this.props.videos.map(video => {
-			if (video.year.includes(this.props.mediaYear)){
-				return (
-					<div 
-						key={video.id}
-						className="search-result-item">
-						<Link to={`/video/${video.id}`} >
-							<img src={video.filepath} />
-							<p>{video.title} - {video.year}</p>
-							<p>Video</p>
-						</Link>
-					</div>
-				);
-			} else {
-				return;
+
+		var relatedVideosArray = this.props.videos.filter(video => {
+			if (video.year.includes(this.props.mediaYear) || video.title.includes(this.props.mediaTitle)) {
+				return video;
 			}
+		});
+
+		return relatedVideosArray.slice(0,5).map(video => {
+			return (
+				<div 
+					key={video.id}
+					className="search-result-item">
+					<Link to={`/video/${video.id}`} >
+						<img src={video.filepath} />
+						<p>{video.title} - {video.year}</p>
+						<p>Video</p>
+					</Link>
+				</div>
+			);
 		});
 	}
 
