@@ -14,11 +14,12 @@ class SearchBar extends Component {
 
 	onInputChange(event) {
 		this.setState({term: event.target.value});
-		this.props.updateYear(event.target.value); //Sends city to to updateYear action
+		this.props.updateYear(event.target.value);
 	}
 
 	render() {
 		return (
+
 			<input
 				placeholder="Enter a Year"
 				value={this.state.term}

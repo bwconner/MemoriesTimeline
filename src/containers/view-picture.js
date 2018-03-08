@@ -9,7 +9,7 @@ class ViewPicture extends Component {
 	render() {
 		const {props} = this.props;
 		const imageId = this.props.match.params.id;
-		const image = props.videos.filter(image => image.id === imageId);
+		const image = props.pictures.filter(image => image.id === imageId);
 
 		return (
 			<div>

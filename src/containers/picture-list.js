@@ -8,7 +8,9 @@ class PictureList extends Component {
 
 	renderPictureList() {
 		return this.props.pictures.map(picture => {
-			if (picture.year.includes(this.props.year)){
+			var searchTerm = this.props.term.toLowerCase();
+
+			if (picture.year.includes(searchTerm) || picture.title.toLowerCase().includes(searchTerm)){
 				return (
 					<div 
 						key={picture.id} 
@@ -39,7 +41,7 @@ function mapStateToProps(state) {
 	//Return as props to PictureList
 	return {
 		pictures: state.pictures,
-		year: state.year
+		term: state.term
 	};
 }
 

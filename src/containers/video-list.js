@@ -8,7 +8,9 @@ class VideoList extends Component {
 
 	renderVideoList() {
 		return this.props.videos.map(video => {
-			if (video.year.includes(this.props.year)){
+			var searchTerm = this.props.term.toLowerCase();
+
+			if (video.year.includes(searchTerm) || video.title.toLowerCase().includes(searchTerm)){
 				return (
 					<div 
 						key={video.id} 
@@ -39,7 +41,7 @@ function mapStateToProps(state) {
 	//Return as props to VideoList
 	return {
 		videos: state.videos,
-		year: state.year
+		term: state.term
 	};
 }
 
