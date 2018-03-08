@@ -3,26 +3,24 @@ export const IMAGE_SELECTED = "IMAGE_SELECTED";
 export const VIDEO_SELECTED = "VIDEO_SELECTED";
 
 
-export function updateYear(term) {	
+export function updateTerm(term) {	
 	//A search has been completed, need to return list of pictures and videos
 	return {
-		type: UPDATE_SEARCH, //describes purpose of the action
-		payload: term //clarifies conditons of action being triggered
+		type: UPDATE_SEARCH,
+		payload: term
 	};
 }
 
 export function selectImage(image) {	
-	//A search has been completed, need to return list of pictures and videos
 	return {
-		type: IMAGE_SELECTED, //describes purpose of the action
-		payload: image //clarifies conditons of action being triggered
+		type: IMAGE_SELECTED,
+		payload: image
 	};
 }
 
 export function selectVideo(video) {	
-	//A search has been completed, need to return list of pictures and videos
 	return {
-		type: VIDEO_SELECTED, //describes purpose of the action
-		payload: video //clarifies conditons of action being triggered
+		type: VIDEO_SELECTED,
+		payload: video
 	};
 }

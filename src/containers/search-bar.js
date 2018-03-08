@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
-import {updateYear} from "../actions/index";
+import {updateTerm} from "../actions/index";
 
 class SearchBar extends Component {
 	constructor(props) {
@@ -14,14 +14,14 @@ class SearchBar extends Component {
 
 	onInputChange(event) {
 		this.setState({term: event.target.value});
-		this.props.updateYear(event.target.value);
+		this.props.updateTerm(event.target.value);
 	}
 
 	render() {
 		return (
 
 			<input
-				placeholder="Enter a Year"
+				placeholder="Enter a Search Term"
 				value={this.state.term}
 				onChange={this.onInputChange}
 				className="form-control search-bar"
@@ -31,7 +31,7 @@ class SearchBar extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-	return bindActionCreators({updateYear}, dispatch);
+	return bindActionCreators({updateTerm}, dispatch);
 }
 
 export default connect(null, mapDispatchToProps)(SearchBar);

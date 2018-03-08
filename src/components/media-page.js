@@ -7,7 +7,7 @@ export default class MediaPage extends Component {
 
 		return (
 			<div>
-				<div>
+				<div className="media-page-image">
 					<img src={media.filepath}/>
 				</div>
 				<div>
