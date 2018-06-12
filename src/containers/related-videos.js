@@ -7,7 +7,7 @@ class RelatedVideos extends Component {
 	renderRelatedVideoList() {
 
 		let relatedVideosArray = this.props.videos.filter(video => {
-			if (video.year.includes(this.props.mediaYear) || video.title.includes(this.props.mediaTitle)) {
+			if (video.id !== this.props.mediaId && (video.year.includes(this.props.mediaYear) || video.title.includes(this.props.mediaTitle))) {
 				return video;
 			}
 		});

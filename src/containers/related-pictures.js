@@ -7,7 +7,7 @@ class RelatedPictures extends Component {
 	renderRelatedPictureList() {
 
 		let relatedPicturesArray = this.props.pictures.filter(picture => {
-			if (picture.year.includes(this.props.mediaYear) || picture.title.includes(this.props.mediaTitle)){
+			if (picture.id !== this.props.mediaId && (picture.year.includes(this.props.mediaYear) || picture.title.includes(this.props.mediaTitle))){
 				return picture;
 			}
 		});

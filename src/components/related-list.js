@@ -7,8 +7,8 @@ export default class RelatedList extends Component {
 	render() {
 		return (
 			<div className="related-list">
-				<RelatedVideos mediaYear={this.props.mediaYear} mediaTitle={this.props.mediaTitle} />
-				<RelatedPictures mediaYear={this.props.mediaYear} mediaTitle={this.props.mediaTitle} />
+				<RelatedVideos mediaYear={this.props.mediaYear} mediaTitle={this.props.mediaTitle} mediaId={this.props.mediaId}/>
+				<RelatedPictures mediaYear={this.props.mediaYear} mediaTitle={this.props.mediaTitle} mediaId={this.props.mediaId}/>
 			</div>
 		);
 	}

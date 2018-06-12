@@ -17,7 +17,7 @@ class ViewPicture extends Component {
 					Return to Search
 				</Link>
 				<MediaPage media={image} />
-				<RelatedList mediaYear={image[0].year} mediaTitle={image[0].title} />
+				<RelatedList mediaYear={image[0].year} mediaTitle={image[0].title} mediaId={image[0].id} />
 			</div>
 		);
 	}
