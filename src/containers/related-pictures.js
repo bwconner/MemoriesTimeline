@@ -43,6 +43,4 @@ function mapStateToProps(state) {
 	};
 }
 
-//Promote BookList from a component to a container, it needs to know
-//about this new dispatch method, selectBook. Make it available as prop.
 export default connect(mapStateToProps)(RelatedPictures);

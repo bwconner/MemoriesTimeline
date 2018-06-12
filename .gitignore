@@ -6,3 +6,7 @@ npm-debug.log
 # IntelliJ
 *.iml
 /.idea
+
+media/videos/test9.jpg
+*.jpg
+media/videos/test1.jpg
