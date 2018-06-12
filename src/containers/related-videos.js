@@ -37,7 +37,6 @@ class RelatedVideos extends Component {
 }
 
 function mapStateToProps(state) {
-	//Return as props to VideoList
 	return {
 		videos: state.videos
 	};
